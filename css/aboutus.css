@@ -1,0 +1,39 @@
+.aboutus-content{
+  background-image: url("../images/aboutus_bg.jpg");
+  background-repeat: no-repeat;
+  padding: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 83%;
+  height: 50em;
+  margin-bottom: 5%;
+  display: none;
+}
+
+.aboutus-content img{
+  width: 5%;
+  float: right;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  border-radius: 10px;
+  border: 2px dashed goldenrod;
+  padding: 5px;
+  display: none;
+}
+
+.aboutus-who{
+      width: 43%;
+}
+
+
+#site-info {
+	height: 3em;
+	width: 100%;
+	line-height: 3;
+	text-align: center;
+	background: #00CDCD;
+	position: fixed;
+	color: #fff;
+	left: 0;
+	bottom: 0;
+}
