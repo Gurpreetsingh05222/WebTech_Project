@@ -9,7 +9,7 @@
 		
 		    // Properties
 		
-			this.cartPrefix = "Furniture-"; // Prefix string to be prepended to the cart's name in the session storage
+			this.cartPrefix = "Books-"; // Prefix string to be prepended to the cart's name in the session storage
 			this.cartName = this.cartPrefix + "cart"; // Cart name in the session storage
 			this.shippingRates = this.cartPrefix + "shipping-rates"; // Shipping rates key in the session storage
 			this.total = this.cartPrefix + "total"; // Total key in the session storage
