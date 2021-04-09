@@ -6,4 +6,5 @@ $(document).ready(function(){
     width: "50%",
     opacity: 1
   }, 1000);
+  
 });
