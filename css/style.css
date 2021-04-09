@@ -42,7 +42,7 @@
   width: 70px;
   margin-bottom: 5%;
   margin-top: 5%;
-  
+
 }
 .overlay-right .fa
 {
@@ -55,7 +55,7 @@
   padding: 7px;
   margin-bottom: 5%;
   margin-top: 10px;;
-   
+
 
 }
 .overlay-right .btn-secondary
@@ -74,7 +74,7 @@
 .product-bottom h3
 {
   font-size: 28px;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
 }
 
 .tagline {
@@ -117,8 +117,8 @@
   color: black;
   margin: 0;
   font-size: 1.4em;
-  
-  
+
+
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -131,7 +131,7 @@
   margin-left: 90px;
   background: #fff;
   color: black;
-  
+
 }
 
 form.add-to-cart div
@@ -140,17 +140,17 @@ form.add-to-cart div
   color: black;
 }
 
-form.add-to-cart p 
+form.add-to-cart p
 {
   text-align: center;
-  
+
   color: #00CDCD;
 }
 
 form.add-to-cart p .btn
 {
   text-align: center;
-  
+
   color: white;
   background: red;
   margin-bottom: 40px;
@@ -164,14 +164,14 @@ form input.qty {
   color: #000;
   border-radius: 3px;
   margin-left: 0.4em;
-  
+
 }
 
 .btn{
   display: inline-block;
   background: #800;
   color: white;
-  
+
   padding: 0.3em 1em;
   text-align: center;
   border-radius: 4px;
@@ -189,7 +189,7 @@ form input.qty {
   border: 1px solid #a00;
 }
 
-/* 
+/*
 #slider
 {
   width: 100%;
@@ -207,7 +207,7 @@ form input.qty {
 {
   margin-top:20px;
   margin-bottom:30px;
-  
+
 }
 
 .about-content
@@ -230,7 +230,7 @@ form input.qty {
 {
   border-radius:16px!important;
   margin-bottom: 20px;
-  
+
 }
 
 #services
@@ -280,7 +280,7 @@ form input.qty {
 
 #services i
 {
-  
+
   color: white;
 }
 
@@ -299,7 +299,7 @@ form input.qty {
   background:#007bff;
   cursor: pointer;
   transition: 0.7s;
-  
+
 }
 
 #site-info {
@@ -514,6 +514,7 @@ body#checkout-page #site-info {
 
 /* Navbar */
 .nav-bar{
+    position: relative;
     width: 100%;
     /* background-color: aquamarine; */
     margin-top: 30px;
@@ -664,4 +665,32 @@ main{
   text-decoration: none;
   color: #fff;
   margin: 0 5%;
+}
+
+.alignItems {
+  position: relative;
+  float: right;
+  right: 11%;
+}
+
+.cart-basket {
+  font-size: .6rem;
+  width: 15px;
+  height: 15px;
+  right: 8.8%;
+  top: -3px;
+  color: #fff;
+  letter-spacing: normal;
+  background-color: #418deb;
+  border-radius: 50%;
+  font-family: Helvetica,Arial,Verdana,sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
