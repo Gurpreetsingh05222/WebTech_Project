@@ -27,7 +27,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
   </head>
-
   <body>
     <header class="header">
       <h1>Book Selling</h1>
@@ -116,7 +115,7 @@
             <div class="col-md-3">
               <div class="card">
               <div class="product-top">
-                <img src="images/elon_musk.jfif" />
+                <img src="images/elon_musk.jfif" onclick="details(this);" />
               </div>
 
               <div class="product-bottom text-center">
@@ -125,12 +124,27 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
-                <h3>Elon Musk</h3>
+                <div class="clickable" onclick="descDetails(this)"><h3>Elon Musk</h3></div>
                 <div
                   class="product-description"
                   data-name="Elon Musk"
                   data-price="10"
-                >
+                  data-desc="In the spirit of Steve Jobs and Moneyball,
+                  Elon Musk is both an illuminating and authorized look at the extraordinary life of one
+                  of Silicon Valley’s most exciting, unpredictable, and ambitious entrepreneurs—a real-life
+                  Tony Stark—and a fascinating exploration of the renewal of American invention and its new “makers.”
+                  Elon Musk spotlights the technology and vision of Elon Musk, the renowned entrepreneur and innovator
+                  behind SpaceX, Tesla, and SolarCity, who sold one of his Internet companies, PayPal, for $1.5 billion.
+                  Ashlee Vance captures the full spectacle and arc of the genius’s life and work, from his tumultuous
+                  upbringing in South Africa and flight to the United States to his dramatic technical innovations and entrepreneurial pursuits.
+                  Vance uses Musk’s story to explore one of the pressing questions of our age: can the nation of inventors
+                  and creators who led the modern world for a century still compete in an age of fierce global competition?
+                  He argues that Musk—one of the most unusual and striking figures in American business history—is a contemporary,
+                  visionary amalgam of legendary inventors and industrialists including Thomas Edison, Henry Ford, Howard Hughes,
+                  and Steve Jobs. More than any other entrepreneur today, Musk has dedicated his energies and his own vast fortune to
+                  inventing a future that is as rich and far-reaching as the visionaries of the golden age of science-fiction fantasy.
+                  Thorough and insightful, Elon Musk brings to life a technology industry that is rapidly and dramatically changing by
+                  examining the life of one of its most powerful and influential titans.">
                   <p class="product-price">&dollar; 10</p>
                   <form class="add-to-cart" action="cart.html" method="post">
                     <div>
@@ -155,7 +169,7 @@
             <div class="col-md-3">
               <div class="card">
               <div class="product-top">
-                <img src="images/conor.jpg" />
+                <img src="images/conor.jpg" onclick="details(this);" />
               </div>
 
               <div class="product-bottom text-center">
@@ -164,12 +178,23 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
-                <h3>Conor</h3>
+                <div class="clickable" onclick="descDetails(this)"><h3>Conor</h3></div>
                 <div
                   class="product-description"
                   data-name="Conor"
                   data-price="15"
-                >
+                  data-src="images/elon_musk.jfif"
+                  data-desc="A firefighter kills a girl and descends into madness and incarceration.
+                  Denied access to his unborn baby while the medical fraternity locks him away for a
+                  crime he didn't commit, probably, he fights for his freedom in any way he can,
+                  and that can only be in a way that is against society's rules. He reels under the
+                  hatred and disgust of normal society, makes unconventional allies, however conventional
+                  in his new world, finds unexpected love where he could least have expected it, and suffers
+                  tragedy that leaves him resentful and rejecting the world as he had once known it. Conor is
+                  a novel evocative of the thin veil lying between sanity and madness, and the tragedy of a
+                  broken love story and a rebirth of a broken man from society's forgotten dregs, rejected
+                  by family, friends, and peers, forced to break his own rules and deny his own upbringing
+                  to find love and freedom once more.">
                   <p class="product-price">&dollar; 15</p>
                   <form class="add-to-cart" action="cart.html" method="post">
                     <div>
@@ -194,7 +219,7 @@
             <div class="col-md-3">
               <div class="card">
               <div class="product-top">
-                <img src="images/godInRuins.jpg" />
+                <img src="images/godInRuins.jpg" onclick="details(this);" />
               </div>
 
               <div class="product-bottom text-center">
@@ -203,12 +228,17 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
-                <h3>A God In Ruins</h3>
+                <div class="clickable" onclick="descDetails(this)"><h3>A God In Ruins</h3></div>
                 <div
                   class="product-description"
                   data-name="A God In Ruins"
                   data-price="14"
-                >
+                  data-src="images/godInRuins.jpg"
+                  data-desc="A companion to the best-selling Life After Life follows
+                  the experiences of Ursulas younger brother Teddy who throughout
+                  the decades following wartime service he never expected to
+                  survive struggles with family life against a backdrop of a changing
+                  world Reading-group guide available Reprint 150 000 first printing">
                   <p class="product-price">&dollar; 14</p>
                   <form class="add-to-cart" action="cart.html" method="post">
                     <div>
@@ -233,7 +263,7 @@
             <div class="col-md-3">
               <div class="card">
               <div class="product-top">
-                <img src="images/wildRobot.jpg" />
+                <img src="images/wildRobot.jpg" onclick="details(this);" />
               </div>
 
               <div class="product-bottom text-center">
@@ -242,12 +272,25 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
-                <h3>Wild Robot</h3>
+                <div class="clickable" onclick="descDetails(this)"><h3>Wild Robot</h3></div>
                 <div
                   class="product-description"
                   data-name="Wild Robot"
                   data-price="30"
-                >
+                  data-src="images/wildRobot.jpg"
+                  data-desc="When robot Roz opens her eyes for the first time,
+                  she discovers that she is alone on a remote, wild island.
+                  She has no idea how she got there or what her purpose is--but
+                  she knows she needs to survive. After battling a fierce storm
+                  and escaping a vicious bear attack, she realizes that her only
+                  hope for survival is to adapt to her surroundings and learn
+                  from the island's unwelcoming animal inhabitants.
+                  <br>As Roz slowly befriends the animals, the island starts
+                  to feel like home--until, one day, the robot's mysterious
+                  past comes back to haunt her.
+                  <br>From bestselling and award-winning author and
+                  illustrator Peter Brown comes a heartwarming and action-packed
+                  novel about what happens when nature and technology collide.">
                   <p class="product-price">&dollar; 30</p>
                   <form class="add-to-cart" action="cart.html" method="post">
                     <div>
@@ -274,7 +317,7 @@
             <div class="col-md-3">
               <div class="card">
               <div class="product-top">
-                <img src="images/blackRabbit.jpg" />
+                <img src="images/blackRabbit.jpg" onclick="details(this);" />
               </div>
 
               <div class="product-bottom text-center">
@@ -283,12 +326,20 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
-                <h3>Black Rabbit</h3>
+                <div class="clickable" onclick="descDetails(this)"><h3>Black Rabbit</h3></div>
                 <div
                   class="product-description"
                   data-name="Black Rabbit"
                   data-price="31"
-                >
+                  data-src="images/blackRabbit.jpg"
+                  data-desc="Rabbit has a problem.
+                  There’s a large black rabbit chasing him.
+                  No matter where he runs — behind a tree,
+                  over the river — the shadowy rabbit follows.
+                  Finally in the deep, dark wood, Rabbit loses his nemesis —
+                  only to encounter a real foe! Kids who like to be in on
+                  the secret will revel in this humorous look at shadows and
+                  friendship, brought to light by a talented animator.">
                   <p class="product-price">&dollar; 31</p>
                   <form class="add-to-cart" action="cart.html" method="post">
                     <div>
@@ -313,7 +364,7 @@
             <div class="col-md-3">
               <div class="card">
               <div class="product-top">
-                <img src="images/compass.jpg" />
+                <img src="images/compass.jpg" onclick="details(this);" />
               </div>
 
               <div class="product-bottom text-center">
@@ -322,12 +373,25 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
-                <h3>Compass</h3>
+                <div class="clickable" onclick="descDetails(this)"><h3>Compass</h3></div>
                 <div
                   class="product-description"
                   data-name="Compass"
                   data-price="30"
-                >
+                  data-src="images/compass.jpg"
+                  data-desc="<b><q>The compass's rocky evolution is charted with
+                    an enthusiast's passion…A fascinating adventure.</q> —Bernadette
+                    Murphy, Los Angeles Times</b><br>
+                    This is the rich history of the most important navigational
+                    device of all time, the magnetic compass, born of the need
+                    for a reliable means of negotiating treacherous sea routes
+                    around the globe. Compass chronicles the misadventures of
+                    those who attempted to perfect the instrument—so precious
+                    to sixteenth-century seamen that, by law, any man found
+                    tampering with one had his hand pinned to the mast with a
+                    dagger. Part history, part adventure, this book is a
+                    compelling tribute to human ingenuity—and the mysteries
+                    of the sea.">
                   <p class="product-price">&dollar; 30</p>
                   <form class="add-to-cart" action="cart.html" method="post">
                     <div>
@@ -352,21 +416,25 @@
             <div class="col-md-3">
               <div class="card">
               <div class="product-top">
-                <img src="images/beautyandbeast.jpg" />
+                <img src="images/beautyandbeast.jpg" onclick="details(this);" />
               </div>
-
               <div class="product-bottom text-center">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
-                <h3>The Beauty and the beast</h3>
+                <div class="clickable" onclick="descDetails(this)"><h3>The Beauty and the beast</h3></div>
                 <div
                   class="product-description"
                   data-name="The beauty and the beast"
                   data-price="16"
-                >
+                  data-src="images/beautyandbeast.jpg"
+                  data-desc="Come be our guest in the Beast’s castle where
+                  teapots talk, spoons dance, and beautiful Belle discovers
+                  that things are never quite as they seem. Disney’s Beauty
+                  and the Beast is retold in the classic Little Golden Book
+                  format.">
                   <p class="product-price">&dollar; 16</p>
                   <form class="add-to-cart" action="cart.html" method="post">
                     <div>
@@ -391,21 +459,52 @@
             <div class="col-md-3">
               <div class="card">
               <div class="product-top">
-                <img src="images/heaven.jpg" />
+                <img src="images/heaven.jpg" onclick="details(this);" />
               </div>
-
               <div class="product-bottom text-center">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
-                <h3>Heaven</h3>
+                <div class="clickable" onclick="descDetails(this)"><h3>Heaven</h3></div>
                 <div
                   class="product-description"
                   data-name="Heaven"
                   data-price="40"
-                >
+                  data-src="images/heaven.jpg"
+                  data-desc="<b>Winner of the Anisfield-Wolf Book Award for Poetry<br>
+                    Winner of the Nicolás Guillén Outstanding Book Award<br>
+                    Finalist for the Griffin International Poetry Prize<br>
+                    Long-listed for the National Book Award<br>
+                    Long-listed for the PEN Open Book Award<br>
+                    One of The Washington Post’s Best Poetry Collections of 2015<br>
+                    One of NPR’s Best Books of 2015<br>
+                    One of Flavorwire’s Best Poetry Books of 2015</b><br>
+                    <q>Who the hell's heaven is this?</q> Rowan Ricardo Phillips offers
+                    many answers, and none at all, in Heaven, the piercing and
+                    revelatory encore to his award-winning debut, The Ground.
+                    Swerving elegantly from humor to heartbreak, from Colorado to Florida,
+                    from Dante's Paradise to Homer's Iliad, from knowledge to ignorance to
+                    awe, Phillips turns his gaze upward and outward, probing and upending
+                    notions of the beyond.<br>
+                    <q>Feeling, real feeling / with all its faulty / Architecture, is / Beyond a god's touch</q>
+                    ―but it does not elude Phillips. Meditating on feverish boyhood,
+                    on two paintings by Chuck Close, on Shakespeare's Measure for Measure,
+                     on a dead rooster by the side of the road in Ohio, on an elk
+                     grazing outside his window, his language remains eternally
+                     intoxicating, full of play, pathos, and surprise.
+                    <q>The end,</q> he writes, <q>like / All I've ever told you
+                      , is uncertain.</q> Or, elsewhere: <q>The only way then to
+                      know a truth / Is to squint in its direction and poke.</q>
+                      Phillips―who received a 2013 Whiting Writers'
+                      Award as well as the PEN/Joyce Osterweil Award―may not be certain
+                      , but as he squints and pokes in the direction of truth,
+                      his power of perception and elegance of expression
+                      create a place where beauty and truth come together and
+                      drift apart like a planet orbiting its star. The result is a
+                      book whose lush and wounding beauty will leave its mark on
+                      readers long after they've turned the last page.">
                   <p class="product-price">&dollar; 40</p>
                   <form class="add-to-cart" action="cart.html" method="post">
                     <div>

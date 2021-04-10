@@ -363,6 +363,8 @@
 				var $form = $( this );
 				var $product = $form.parent();
 				var price = self._convertString( $product.data( "price" ) );
+				var src = $product.data( "src" );
+				var desc = $product.data( "desc" );
 				var name =  $product.data( "name" );
 
 				$form.on( "submit", function() {
@@ -373,6 +375,8 @@
 					self.storage.setItem( self.total, sTotal );
 					self._addToCart({
 						product: name,
+						src: src,
+						description: desc,
 						price: price,
 						qty: qty
 					});
@@ -383,7 +387,6 @@
 					else {
 						count = parseInt(count);
 					}
-					debugger;
 					count = count + parseInt(qty)
 					localStorage.setItem("itemCount", count);
 					$("#itemCount").text(count);

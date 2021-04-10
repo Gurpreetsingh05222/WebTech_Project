@@ -694,3 +694,12 @@ main{
   -ms-flex-align: center;
   align-items: center;
 }
+
+.product-top img:hover {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
