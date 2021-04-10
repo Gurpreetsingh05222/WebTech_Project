@@ -191,14 +191,16 @@
 				$( document ).on( "click", ".pdelete a", function( e ) {
 					e.preventDefault();
 					var productName = $( this ).data( "product" );
+					var productQty = $( this ).data( "qty" );
 					var newItems = [];
 					for( var i = 0; i < items.length; ++i ) {
 						var item = items[i];
 						var product = item.product;
-						if( product == productName ) {
+						var qty = item.qty;
+						if( product == productName && qty == productQty) {
 							items.splice( i, 1 );
-							var count = item.qty;
-							localStorage.setItem("itemCount", localStorage.getItem("itemCount") - count);
+							localStorage.setItem("itemCount", localStorage.getItem("itemCount") - qty);
+							break;
 						}
 					}
 					newItems = items;
@@ -241,15 +243,13 @@
 				if( items.length == 0 ) {
 					$tableCartBody.html( "" );
 				} else {
-
-
 					for( var i = 0; i < items.length; ++i ) {
 						var item = items[i];
 						var product = item.product;
 						var price = this.currency + " " + item.price;
 						var qty = item.qty;
 						var html = "<tr><td class='pname'>" + product + "</td>" + "<td class='pqty'><input type='text' value='" + qty + "' class='qty'/></td>";
-					    	html += "<td class='pprice'>" + price + "</td><td class='pdelete'><a href='' data-product='" + product + "'>&times;</a></td></tr>";
+					    	html += "<td class='pprice'>" + price + "</td><td class='pdelete'><a href='' data-qty='" + qty + "' data-product='" + product + "'>&times;</a></td></tr>";
 
 						$tableCartBody.html( $tableCartBody.html() + html );
 					}
@@ -269,7 +269,6 @@
 				var $cartBody = this.$checkoutCart.find( "tbody" );
 
 				if( cartItems.length > 0 ) {
-
 					for( var j = 0; j < cartItems.length; ++j ) {
 						var cartItem = cartItems[j];
 						var cartProduct = cartItem.product;
@@ -350,7 +349,7 @@
 				self.storage.setItem( self.total, self._convertNumber( updatedTotal ) );
 				self.storage.setItem( self.shippingRates, self._convertNumber( self._calculateShipping( totalQty ) ) );
 				self.storage.setItem( self.cartName, self._toJSONString( updatedCart ) );
-
+				localStorage.setItem("itemCount", totalQty);
 			});
 		  }
 		},

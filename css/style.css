@@ -312,6 +312,7 @@ form input.qty {
   color: #fff;
   left: 0;
   bottom: 0;
+  margin-top: 15px;
 }
 
 body#checkout-page #site-info {
@@ -702,4 +703,36 @@ main{
 .clickable:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.space {
+  margin-top: 5% !important;
+}
+
+.floatLeft {
+  float: left;
+  width: 50% !important;
+}
+
+.diff {
+	margin-bottom: 20px !important;
+	padding-bottom: 20px !important;
+}
+
+.floatRight {
+  float: right;
+  width: 50% !important;
+}
+
+#site-info {
+	height: 3em;
+	width: 100%;
+	line-height: 3;
+	text-align: center;
+	background: #00CDCD;
+	position: fixed;
+	color: #fff;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
 }
