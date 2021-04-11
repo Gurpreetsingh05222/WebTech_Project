@@ -199,7 +199,7 @@
 						var qty = item.qty;
 						if( product == productName && qty == productQty) {
 							items.splice( i, 1 );
-							localStorage.setItem("itemCount", localStorage.getItem("itemCount") - qty);
+							sessionStorage.setItem("itemCount", sessionStorage.getItem("itemCount") - qty);
 							break;
 						}
 					}
@@ -306,7 +306,7 @@
 			if( self.$emptyCartBtn.length ) {
 				self.$emptyCartBtn.on( "click", function() {
 					self._emptyCart();
-					localStorage.setItem("itemCount", 0);
+					sessionStorage.setItem("itemCount", 0);
 				});
 			}
 		},
@@ -349,7 +349,7 @@
 				self.storage.setItem( self.total, self._convertNumber( updatedTotal ) );
 				self.storage.setItem( self.shippingRates, self._convertNumber( self._calculateShipping( totalQty ) ) );
 				self.storage.setItem( self.cartName, self._toJSONString( updatedCart ) );
-				localStorage.setItem("itemCount", totalQty);
+				sessionStorage.setItem("itemCount", totalQty);
 			});
 		  }
 		},
@@ -379,7 +379,7 @@
 						price: price,
 						qty: qty
 					});
-					var count = localStorage.getItem("itemCount");
+					var count = sessionStorage.getItem("itemCount");
 					if(count == null) {
 						count = 0;
 					}
@@ -387,7 +387,7 @@
 						count = parseInt(count);
 					}
 					count = count + parseInt(qty)
-					localStorage.setItem("itemCount", count);
+					sessionStorage.setItem("itemCount", count);
 					$("#itemCount").text(count);
 					var shipping = self._convertString( self.storage.getItem( self.shippingRates ) );
 					var shippingRates = self._calculateShipping( qty );
