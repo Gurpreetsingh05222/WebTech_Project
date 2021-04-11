@@ -347,16 +347,3 @@ form input.qty {
   position: absolute;
   right: 15%;
 }
-
-#site-info {
-	height: 3em;
-	width: 100%;
-	line-height: 3;
-	text-align: center;
-	background: #00CDCD;
-	position: fixed;
-	color: #fff;
-	left: 0;
-	bottom: 0;
-	z-index: 10;
-}
