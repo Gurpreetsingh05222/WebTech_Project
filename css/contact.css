@@ -29,37 +29,7 @@ body, html {
 }
 
 /*---------------------------------------------*/
-div > a {
-	font-family: Montserrat-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
-div > a:focus {
-	outline: none !important;
-}
-
-div > a:hover {
-	text-decoration: none;
-	color: #57b846;
-}
-
-/*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
-}
-
-p {
-	font-family: Montserrat-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
 	margin: 0px;
 }
 
@@ -144,7 +114,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: rgba(113, 188, 255, 0.9);
+  background: rgba(135, 192, 180, 0.9);
 }
 
 .wrap-contact {
@@ -284,7 +254,7 @@ textarea.input {
 }
 
 .input:focus + .focus-input + .symbol-input {
-  color: #71bcff;
+  color: #5EAB9B;
   padding-left: 22px;
 }
 
@@ -306,7 +276,7 @@ textarea.input {
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #58b0ff;
+  background: #5EAB9B;
   font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.5;

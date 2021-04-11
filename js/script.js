@@ -5,7 +5,7 @@ $(document).ready(function() {
 function validate(){
   var email = document.getElementById("email").value;
   var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-  
+
   var result = emailReg.test(email);
   if(email == ""){
     alert("Email cannot be empty");

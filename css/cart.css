@@ -74,6 +74,7 @@ input[type="submit"]{
 #shipping {
   margin: 1.5em 0;
   text-align: right;
+  margin-right: 2%;
 }
 
 #sub-total span,
