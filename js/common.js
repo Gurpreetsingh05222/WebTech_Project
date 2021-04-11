@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var count = localStorage.getItem("itemCount");
+  var count = sessionStorage.getItem("itemCount");
 	if(count == null) {
 		count = 0;
 	}
