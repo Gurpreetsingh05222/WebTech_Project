@@ -46,6 +46,44 @@ nav .navbar-nav li a{
   width: 100%;
   height: 300px;
 }
+.overlay-right
+{
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  margin-left: 0;
+  width: 70px;
+  margin-bottom: 5%;
+  margin-top: 5%;
+
+}
+.overlay-right .fa
+{
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  height: 35px;
+  width: 35px;
+  font-size: 20px;
+  padding: 7px;
+  margin-bottom: 5%;
+  margin-top: 10px;;
+
+
+}
+.overlay-right .btn-secondary
+{
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.product-top:hover .overlay-right
+{
+  opacity: 1;
+  margin-left: 5%;
+  transition: 0.5s;
+}
 
 .product-top:hover .overlay-right
 {
@@ -100,6 +138,8 @@ nav .navbar-nav li a{
   color: black;
   margin: 0;
   font-size: 1.4em;
+
+
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -261,7 +301,7 @@ form input.qty {
   top: -3px;
   color: #fff;
   letter-spacing: normal;
-  background-color: #418deb;
+  background-color: #d3450d;
   border-radius: 50%;
   font-family: Helvetica,Arial,Verdana,sans-serif;
   display: -webkit-box;
@@ -303,6 +343,11 @@ form input.qty {
   width: 50% !important;
 }
 
+.alignMenu {
+  position: absolute;
+  right: 15%;
+}
+
 #site-info {
 	height: 3em;
 	width: 100%;
@@ -314,10 +359,4 @@ form input.qty {
 	left: 0;
 	bottom: 0;
 	z-index: 10;
-}
-
-@media only screen and (max-width: 600px) {
-  .foo-link{
-    flex-direction: column;
-  }
 }

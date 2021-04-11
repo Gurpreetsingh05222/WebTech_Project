@@ -28,33 +28,49 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"/>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   </head>
-
   <body>
+    <!-- Header -->
     <header class="header">
-      <h1>Book Selling</h1>
+      <h1>Books</h1>
       <p>"A room without book is like body without soul."</p>
     </header>
+    <!-- Header End -->
 
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="index.html" class="menu-active">Home</a></li>
-        <li><a href="">Explore</a></li>
-        <li><a href="">Categories</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="login.html">Sign In</a></li>
-        <li>
-          <a href="cart.html">
-            <i class="alignItems fa fa-shopping-cart" style="font-size: 22px"></i>
-            <span id="itemCount" class="alignItems cart-basket d-flex align-items-center justify-content-center">
-            </span>
-          </a>
-        </li>
-      </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">Books</a>
+      <button class="alignMenu navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">
+              <i class="fa fa-shopping-cart" style="font-size: 26px"></i>
+              <span id="itemCount" class="alignItems cart-basket d-flex align-items-center justify-content-center">
+             </span>
+            </a>
+          </li>
+        </ul>
     </nav>
-
-    <section class="book-details">
+    <!-- Navbar End -->
+  <section class="book-details">
       <div id="site">
         <div class="container">
           <div class="space row">
@@ -92,19 +108,28 @@
         </div>
       </div>
     </section>
-
-    <section class="newsletter">
+    <br><br>
+    <!-- Newsletter -->
+    <section class="newsletter" data-aos="zoom-in-up">
       <h2>Join our newsletter for updates and deals</h2>
       <div class="news-form">
-        <!-- <form> -->
-          <input type="text" id="email" name="email"  placeholder="Enter your email" />
-          <button class="btn" onclick="validate();">Join</button>
-        <!-- </form> -->
+        <input type="text" id="email" name="email" placeholder="Enter your email" />
+        <button class="btn" onclick="validate();">Join</button>
+        <p id="error"></p>
       </div>
     </section>
-    <br><br>
-      <footer id="site-info">
-        Copyright &copy;  <span id="date"></span>
+    <!-- Newsletter end -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="foo-link">
+        <a href="#" target="_blank">Sitemap</a>
+        <a href="#">Explore</a>
+        <a href="cart.html">Cart Page</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <p>Copyright &copy; Book Selling</p>
     </footer>
+    <!-- Footer End -->
   </body>
 </html>

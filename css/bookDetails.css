@@ -1,8 +1,8 @@
 .container img {
   float:right;
   margin-right: 3%;
-  height: 400px;
-  width: 80%;"
+  height: 75%;
+  width: 75%;
 }
 
 .creative {
@@ -17,11 +17,33 @@ form.add-to-cart div {
 }
 
 form.add-to-cart p {
-  margin-top: 5%;
+  color: #379683;
+  margin-top: 2%;
   text-align: left !important;
 }
 
 form.add-to-cart p .btn {
   width: 50%;
   margin-bottom: 3% !important;
+}
+
+#book-desc {
+  font-size: small;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 770px) {
+  [class="container"] img{
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  [class="container"] img{
+    height: 30%;
+  }
+
+  [class="btn"]{
+    width: 75% !important;
+  }
 }
