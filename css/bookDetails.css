@@ -1,0 +1,27 @@
+.container img {
+  float:right;
+  margin-right: 3%;
+  height: 400px;
+  width: 80%;"
+}
+
+.creative {
+  margin-top: 3% !important;
+  margin-left: 0px !important;
+  font-weight: bold;
+  color: #d3450d !important;
+}
+
+form.add-to-cart div {
+  text-align: left !important;
+}
+
+form.add-to-cart p {
+  margin-top: 5%;
+  text-align: left !important;
+}
+
+form.add-to-cart p .btn {
+  width: 50%;
+  margin-bottom: 3% !important;
+}

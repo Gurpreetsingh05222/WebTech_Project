@@ -1,4 +1,7 @@
-// Newsletter Email Validation
+$(document).ready(function() {
+  $("#date").text((new Date).getFullYear());
+});
+
 function validate(){
   var email = document.getElementById("email").value;
   var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
@@ -13,7 +16,40 @@ function validate(){
     window.location.href = "success.html";
   }
 }
-  
+
+function details(elem) {
+  setBooksObject();
+  var title=$(elem).parents('.card').children(1).children('.product-description').data('name');
+  window.location.href = "bookDetails.html?title="+title;
+}
+
+function descDetails(elem) {
+  setBooksObject();
+  var title=$(elem).siblings('.product-description').data('name');
+  window.location.href = "bookDetails.html?title="+title;
+}
+
+function setBooksObject() {
+  var cart = sessionStorage.getItem("Books");
+  var cartItems = [];
+  if(cart == null || cart.length == 0) {
+    $(".product-description").each(function() {
+      var name = $(this).data("name");
+      var src = $(this).data( "src" );
+      var desc = $(this).data("desc");
+      var price = $(this).data("price");
+      var cartObject = {
+        name: name,
+        src: src,
+        desc: desc,
+        price: price
+      }
+      cartItems.push(cartObject);
+    });
+    sessionStorage.setItem("Books", JSON.stringify(cartItems));
+  }
+}
+
 // $(".slider-one")
 // .not(".slick-initialized")
 // .slick({

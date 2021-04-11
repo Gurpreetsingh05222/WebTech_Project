@@ -10,6 +10,11 @@
   table-layout: fixed;
 }
 
+#site {
+	margin-bottom: 20px !important;
+	padding-bottom: 20px !important;
+}
+
 .shopping-cart th {
   font-size: 1.3em;
   padding: 0.3em;
