@@ -39,56 +39,12 @@ nav .navbar-nav li a{
   color: #EDF5E1 !important;
   }
 
-#Slider
-{
-  width: auto;
-  height: 240px;;
-}
-
 /*-----product-top css-------*/
 
 .product-top img
 {
   width: 100%;
   height: 300px;
-}
-.overlay-right
-{
-  display: block;
-  opacity: 0;
-  position: absolute;
-  top: 10%;
-  margin-left: 0;
-  width: 70px;
-  margin-bottom: 5%;
-  margin-top: 5%;
-
-}
-.overlay-right .fa
-{
-  cursor: pointer;
-  background-color: #fff;
-  color: #000;
-  height: 35px;
-  width: 35px;
-  font-size: 20px;
-  padding: 7px;
-  margin-bottom: 5%;
-  margin-top: 10px;;
-
-
-}
-.overlay-right .btn-secondary
-{
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-.product-top:hover .overlay-right
-{
-  opacity: 1;
-  margin-left: 5%;
-  transition: 0.5s;
 }
 
 .product-bottom h3
@@ -148,7 +104,7 @@ nav .navbar-nav li a{
   height: 2em;
   font-size: 1.7em;
   text-align: center;
-  margin-left: 90px;
+  margin: auto;
   background: #fff;
   color: black;
 
@@ -202,7 +158,6 @@ form input.qty {
   display: inline-block;
   background: #800;
   color: white;
-
   padding: 0.3em 1em;
   text-align: center;
   border-radius: 4px;
@@ -220,8 +175,18 @@ form input.qty {
   border: 1px solid #a00;
  }
 
+ 
+/* TESTIMONIAL */
+.testimonial {
+  font-family: "Raleway", sans-serif;
+  /* background-color: #343a40; */
+  color: black;
+  /* padding: 0 0 50px 0; */
+  text-align: center;
+}
+
 .testimonial h1 {
-  font-size: 20pt;
+  font-size: 30px;
 }
 
 .customer {
@@ -235,7 +200,6 @@ form input.qty {
   height: 180px;
   border-radius: 50%;
 }
-
 /* NEWSLETTER */
 
 .newsletter {
@@ -285,6 +249,15 @@ form input.qty {
   text-decoration: none;
   color: #fff;
   margin: 0 5%;
+}
+
+.footer a:hover{
+  text-decoration: none;
+}
+
+.footer p{
+  margin: 0;
+  padding-bottom: 10px;
 }
 
 .alignItems {
@@ -347,3 +320,29 @@ form input.qty {
   position: absolute;
   right: 15%;
 }
+<<<<<<< HEAD
+
+#site-info {
+	height: 3em;
+	width: 100%;
+	line-height: 3;
+	text-align: center;
+	background: #00CDCD;
+	position: fixed;
+	color: #fff;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+@media only screen and (max-width: 360px){
+  .customer{
+    flex-direction: column;
+  }
+
+  .foo-link{
+    flex-direction: column;
+  }
+}
+=======
+>>>>>>> d2161236686c0f322412f60ab4ce666d5719c946
