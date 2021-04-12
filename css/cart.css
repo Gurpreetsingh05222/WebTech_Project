@@ -53,6 +53,8 @@ input[type="submit"]{
 }
 
 #shopping-cart-actions {
+  display: flex;
+  justify-content: center;
   margin: 1.5em 0;
   padding: 0;
   list-style: none;
@@ -84,6 +86,7 @@ input[type="submit"]{
 
 #content {
   margin-top: 30px;
+  min-height: 388px;
 }
 
 #content > h1 {
@@ -91,9 +94,20 @@ input[type="submit"]{
   text-align: center;
 }
 
-.footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+/* Mobile devices */
+@media only screen and (max-width: 360px){
+  #shopping-cart-actions{
+    flex-direction: column;
+  }
+
+  #shopping-cart-actions li {
+    margin: 10px;
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 768px){
+  #content{
+    min-height: 635px;
+  }
 }
