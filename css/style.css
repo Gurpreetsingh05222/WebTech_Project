@@ -320,6 +320,7 @@ form input.qty {
   position: absolute;
   right: 15%;
 }
+<<<<<<< HEAD
 
 #site-info {
 	height: 3em;
@@ -343,3 +344,5 @@ form input.qty {
     flex-direction: column;
   }
 }
+=======
+>>>>>>> d2161236686c0f322412f60ab4ce666d5719c946

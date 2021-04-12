@@ -412,20 +412,6 @@ div {
 	 z-index: 5;
 }
 
-#site-info {
-	height: 3em;
-	width: 100%;
-	line-height: 3;
-	text-align: center;
-	background: #00CDCD;
-	position: fixed;
-	color: #fff;
-	left: 0;
-	bottom: 0;
-	z-index: 10;
-  margin-top: 15px;
-}
-
 @media (max-width: 992px) {
   .alert-validate::before {
     visibility: visible;
