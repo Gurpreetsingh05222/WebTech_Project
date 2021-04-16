@@ -8,12 +8,17 @@ function registration_validation() {
     var password = document.forms["RegForm"]["Password"];
     var confirm_password = document.forms["RegForm"]["confirm_password"];
 
-    if (name.value == "") {
-        window.alert("Please enter your name.");
-        name.focus();
+    if (fname.value == "") {
+        window.alert("Please enter your firstname name.");
+        fname.focus();
         return false;
     }
-
+    
+    if (lname.value == "") {
+        window.alert("Please enter your lastname name.");
+        fname.focus();
+        return false;
+    }
     
     if (email.value == "") {
         window.alert(
@@ -22,18 +27,24 @@ function registration_validation() {
         return false;
     }
 
-    if (phone.value == "") {
+    /*if (phone.value == "") {
         window.alert(
           "Please enter your telephone number.");
         phone.focus();
         return false;
     }
-
-    if (password.value == "") {
+    */
+    if (password1.value == "") {
         window.alert("Please enter your password");
         password.focus();
         return false;
     }  
+   
+    if (password1 != confirm_password) {
+        window.alert("Your Password do not match");
+        confirm_password.focus();
+        return false;
+    } 
 
     return true;
 }
