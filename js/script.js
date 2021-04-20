@@ -1,5 +1,15 @@
 $(document).ready(function() {
   $("#date").text((new Date).getFullYear());
+
+  $('.slider').slick({
+    infinite: true,
+    speed: 700,
+    autoplay:true,
+    autoplaySpeed: 2000,
+    arrows:true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }); 
 });
 
 function validate(){
