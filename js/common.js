@@ -7,4 +7,4 @@ $(document).ready(function() {
 		count = parseInt(count);
 	}
 	$("#itemCount").text(count);
-})
+});
