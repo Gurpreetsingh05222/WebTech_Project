@@ -1,9 +1,13 @@
 
 $(document).ready(function() {
 
-    // move focus to first text box
+  if($(".modal")){
+    $(".login-card").css("opacity","1");
+    $(".modal").css("display","none");
+  }
 
-   
+
+
     // the handler for the click event of a submit button
     var ErrArr = [];
     $("#submit").click(
@@ -25,9 +29,9 @@ $(document).ready(function() {
                 isValid = false;
 
             } else if ( !emailPattern.test(email) ) {
-                 
+
                 ErrArr.push("Must be a valid email address..");
-               
+
                 isValid = false;
 
             } else {
@@ -66,7 +70,7 @@ $(document).ready(function() {
 
             if ($("#first_name").val() == "") {
 
-                ErrArr.push("Please enter your firstname, this field is required.");               
+                ErrArr.push("Please enter your firstname, this field is required.");
 
                 isValid = false;
 
@@ -82,7 +86,7 @@ $(document).ready(function() {
 
             if (lastName == "") {
 
-                ErrArr.push("Please enter your lastname, this field is required.");                
+                ErrArr.push("Please enter your lastname, this field is required.");
 
                 isValid = false;
 
@@ -94,26 +98,26 @@ $(document).ready(function() {
 
             $("#last_name").val(lastName);
 
-                   
+
             var password = $('#password1').val();
-           
+
             var confirm_password = $('#confirm_password').val();
 
             if(password.length < 6)
             {
                 ErrArr.push("Your Password must be greater than 5")
             }
-            
+
             if(password == "")
             {
                 ErrArr.push("Your Password cannot be empty")
             }
-            
+
             if(password != confirm_password)
             {
                 ErrArr.push("Your passwords do not match </b>")
             }
-            
+
             if (isValid == false) {
 
             }
@@ -127,7 +131,7 @@ $(document).ready(function() {
                 return false;
               }
               else{
-               
+
                 $(location).attr('href','login.html');
 
               }
@@ -136,83 +140,43 @@ $(document).ready(function() {
 
     );  // end submit
 
+    $("#error-dialog .close").click(function(){
+      $(".login-card").css("opacity","1");
+      $("#error-dialog").css("display","none");
+    });
+
+    
+
     //Login Validation
 
     $('#login').click(
         function(event){
             event.preventDefault();
-            var password = $('#password').val();
-            var email = $('#email').val();
+            var emailRegex = /\b[A-Za-z0-9]+[.]{0,1}[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z]{2,4}\b/;
+            var email = $("#email").val();
+            var password = $("#password").val();
 
-            if(password !=='admin' && email !== 'admin@outlook.com')
+            if(!emailRegex.test(email) || password.length<8)
             {
-                alert("Invalid username or password")
+                $(".login-card").css("opacity","0.5");
+                $("#error-dialog").css("display","block");
             }
             else
             {
                 sessionStorage.setItem("email", email);
                 $(location).attr('href','index.html');
-            }       
+            }
          }
     );
-    
+
 }); // end ready
 
 //redirect user to login page if they are not logged in
 function isLoggedIn()
 {
-   
+
   if(sessionStorage.getItem("email")==null)
   {
     window.location.href="login.html";
   }
 }
-/*
-function registration_validation() {
-    
-    var fname =  document.forms["RegForm"]["firt_name"];
-    var lname =  document.forms["RegForm"]["last_name"];
-    var email = document.forms["RegForm"]["email"];    
-    var password = document.forms["RegForm"]["Password"];
-    var confirm_password = document.forms["RegForm"]["confirm_password"];
-
-    if (fname.value == "") {
-        window.alert("Please enter your firstname name.");
-        fname.focus();
-        return false;
-    }
-    
-    if (lname.value == "") {
-        window.alert("Please enter your lastname name.");
-        fname.focus();
-        return false;
-    }
-    
-    if (email.value == "") {
-        window.alert(
-          "Please enter a valid e-mail address.");
-        email.focus();
-        return false;
-    }
-
-if (phone.value == "") {
-        window.alert(
-          "Please enter your telephone number.");
-        phone.focus();
-        return false;
-    }
-    
-    if (password1.value == "") {
-        window.alert("Please enter your password");
-        password.focus();
-        return false;
-    }  
-   
-    if (password1 != confirm_password) {
-        window.alert("Your Password do not match");
-        confirm_password.focus();
-        return false;
-    } 
-
-    return true;
-}*/

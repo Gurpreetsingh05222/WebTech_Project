@@ -353,3 +353,7 @@ form input.qty {
     width: 100%;
   }
 }
+
+.wd50{
+  width: 50% !important;
+}
