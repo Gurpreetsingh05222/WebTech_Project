@@ -6,6 +6,11 @@ $(document).ready(function() {
     $(".modal").css("display","none");
   }
 
+  if($(".reg-error-modal")){
+    $(".register-card").css("opacity","1");
+    $(".reg-error-modal").css("display","none");
+  }
+
 
 
     // the handler for the click event of a submit button
@@ -14,7 +19,7 @@ $(document).ready(function() {
 
         function(event) {
             event.preventDefault();
-            var isValid = false;
+            var isValid = true;
 
             // validate the email entry with a regular expression
 
@@ -23,19 +28,16 @@ $(document).ready(function() {
             var email = $("#email").val().trim();
 
             if (email == "") {
-               ErrArr.push("The email field is required.");
-                $("#email").next().text("This field is required.");
+                $("#email_er").text("This field is required.");
 
                 isValid = false;
 
             } else if ( !emailPattern.test(email) ) {
-
-                ErrArr.push("Must be a valid email address..");
+                $("#email_er").text("Must be a valid email address.");
 
                 isValid = false;
 
             } else {
-
                 $("#email").next().text("");
 
             }
@@ -47,14 +49,12 @@ $(document).ready(function() {
             var email2 = $("#email1").val().trim();
 
             if (email2 == "") {
-
-                ErrArr.push("Confrm your email field is required.");
+                $("#email1_er").text("This field is required.");
 
                 isValid = false;
 
             } else if (email !== email2 ) {
-
-                ErrArr.push("Email 2 Must equal first email entry.");
+                $("#email1_er").text("Email 2 Must equal first email entry.");
 
                 isValid = false;
 
@@ -70,7 +70,7 @@ $(document).ready(function() {
 
             if ($("#first_name").val() == "") {
 
-                ErrArr.push("Please enter your firstname, this field is required.");
+                $("#first_name_er").text("This field is required.");
 
                 isValid = false;
 
@@ -86,7 +86,7 @@ $(document).ready(function() {
 
             if (lastName == "") {
 
-                ErrArr.push("Please enter your lastname, this field is required.");
+                  $("#last_name_er").text("This field is required.");
 
                 isValid = false;
 
@@ -105,28 +105,43 @@ $(document).ready(function() {
 
             if(password.length < 6)
             {
-                ErrArr.push("Your Password must be greater than 5")
+                  $("#password_er").text("Your Password must be greater than 5");
+                  isValid = false;
+            }
+            else{
+              $("#password1").next().text("");
             }
 
             if(password == "")
             {
-                ErrArr.push("Your Password cannot be empty")
+                $("#password_er").text("Your Password cannot be empty");
+                isValid = false;
+            }
+            else{
+              $("#password1").next().text("");
             }
 
-            if(password != confirm_password)
+            if(confirm_password == "")
             {
-                ErrArr.push("Your passwords do not match </b>")
+                $("#confirm_password_er").text("Your Password cannot be empty");
+                isValid = false;
+            }
+            else if(password != confirm_password)
+            {
+                $("#confirm_password_er").text("Your passwords do not match");
+                isValid = false;
+            }
+            else{
+                $("#confirm_password").next().text("");
             }
 
-            if (isValid == false) {
 
-            }
 
-            if(ErrArr.length > 0) {
+            if(!isValid) {
 
-                alert(ErrArr.join("\n"));
+              $(".register-card").css("opacity","0.5");
+              $(".reg-error-dialog").css("display","block");
 
-                ErrArr = [];
 
                 return false;
               }
@@ -145,7 +160,12 @@ $(document).ready(function() {
       $("#error-dialog").css("display","none");
     });
 
-    
+    $(".reg-error-dialog .close").click(function(){
+      $(".register-card").css("opacity","1");
+      $(".reg-error-dialog").css("display","none");
+    });
+
+
 
     //Login Validation
 
@@ -156,7 +176,7 @@ $(document).ready(function() {
             var email = $("#email").val();
             var password = $("#password").val();
 
-            if(!emailRegex.test(email) || password.length<8)
+            if(!emailRegex.test(email) || password.length<6)
             {
                 $(".login-card").css("opacity","0.5");
                 $("#error-dialog").css("display","block");

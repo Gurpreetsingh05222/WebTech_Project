@@ -78,15 +78,15 @@ body {
     font-size: 14px;
     color: #919aa3; }
 
-#error-dialog{
-  width: 25%;
-  height: 25%;
+.error-dialog{
+  width: 25% !important;
+  height: 25% !important;
   background: white;
   margin: auto;
   border-radius: 10px;
 }
 
-#error-dialog h1{
+.error-dialog h1{
   background: #379683;
   padding-left: 38%;
   font-size: 1.2em;
@@ -95,18 +95,28 @@ body {
   padding-top: 1%;
 }
 
-#error-dialog .close{
+.error-dialog .close{
   color: white;
   padding-right: 5px;
   padding-top: 2px;
   cursor: pointer;
 }
 
-#error-dialog p{
+.error-dialog p{
   padding-top: 8%;
   padding-left: 18%;
 }
 
+.reg-error-dialog h1 {
+  padding-left: 30%;
+}
 
+.error-field{
+  color: red;
+  font-size: 0.8em;
+}
 
+.register-card input{
+  margin-bottom: 0px !important;
+}
 /*# sourceMappingURL=login.css.map */

@@ -62,7 +62,7 @@
 <body>
   <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
     <div class="container wd50">
-      <div class="card login-card">
+      <div class="card login-card register-card">
         <div class="row no-gutters">
           <div class="col-md-5">
             <img src="images/login.jpg" alt="login" class="login-card-img">
@@ -70,31 +70,36 @@
           <div class="col-md-7">
             <div class="card-body">
               <p class="login-card-description">Signup for an account</p>
-              <!--<form name ="RegForm"  onsubmit="return registration_validation()" method="post" action="#!">-->
                 <form id="email_form" name="email_form" action="post">
                   <div class="form-group">
                     <label for="first_name" class="sr-only">Firstname</label>
                     <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First name" >
+                    <span id="first_name_er" class="error-field"></span>
                   </div>
                   <div class="form-group">
                     <label for="last_name" class="sr-only">Firstname</label>
                     <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last name">
+                    <span id="last_name_er" class="error-field"></span>
                   </div>
                   <div class="form-group">
                     <label for="email" class="sr-only">Email</label>
                     <input type="email" name="email" id="email" class="form-control" placeholder="Email address" >
+                    <span id="email_er" class="error-field"></span>
                   </div>
                   <div class="form-group">
                     <label for="email1" class="sr-only">Email</label>
                     <input type="email" name="email1" id="email1" class="form-control" placeholder="Confirm Email address" >
+                    <span id="email1_er" class="error-field"></span>
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
                     <input type="password" name="password" id="password1" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    <span id="password_er" class="error-field"></span>
                   </div>
                   <div class="form-group mb-4">
                     <label for="confirm_password" class="sr-only">ConfirmPassword</label>
                     <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm Password">
+                    <span id="confirm_password_er" class="error-field"></span>
                   </div>
                   <input name="login" id="submit" class="btn btn-block login-btn mb-4" type="button" value="Register" >
               </form>
@@ -105,6 +110,15 @@
       </div>
     </div>
   </main>
+  <div id="reg-error-dialog" class="modal error-dialog reg-error-dialog">
+    <span class="close" title="Close Modal">×</span>
+    <div >
+      <h1>Registration Error</h1>
+    </div>
+    <div>
+      <p>Invalid details! Please try again!</p>
+    </div>
+  </div>
    <!-- Footer -->
    <footer class="footer">
     <div class="foo-link">
