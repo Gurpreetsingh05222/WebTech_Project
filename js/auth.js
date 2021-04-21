@@ -98,6 +98,11 @@ $(document).ready(function() {
             var password = $('#password1').val();
            
             var confirm_password = $('#confirm_password').val();
+
+            if(password.length < 6)
+            {
+                ErrArr.push("Your Password must be greater than 5")
+            }
             
             if(password == "")
             {
@@ -123,7 +128,7 @@ $(document).ready(function() {
               }
               else{
                
-                $(location).attr('href','login.html')
+                $(location).attr('href','login.html');
 
               }
 
@@ -131,7 +136,37 @@ $(document).ready(function() {
 
     );  // end submit
 
+    //Login Validation
+
+    $('#login').click(
+        function(event){
+            event.preventDefault();
+            var password = $('#password').val();
+            var email = $('#email').val();
+
+            if(password !=='admin' && email !== 'admin@outlook.com')
+            {
+                alert("Invalid username or password")
+            }
+            else
+            {
+                sessionStorage.setItem("email", email);
+                $(location).attr('href','index.html');
+            }       
+         }
+    );
+    
 }); // end ready
+
+//redirect user to login page if they are not logged in
+function isLoggedIn()
+{
+   
+  if(sessionStorage.getItem("email")==null)
+  {
+    window.location.href="login.html";
+  }
+}
 /*
 function registration_validation() {
     
