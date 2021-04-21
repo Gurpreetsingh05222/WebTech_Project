@@ -39,7 +39,15 @@ nav .navbar-nav li a{
   color: #EDF5E1 !important;
   }
 
-/*-----product-top css-------*/
+  /*-----SLIDER-----*/
+
+ .slider img{
+  width: 100%;
+  height: 500px;
+  display: none;
+}
+
+/*-----product-top css-----*/
 
 .product-top img
 {
@@ -209,6 +217,11 @@ form input.qty {
   color: #072e55;
 }
 
+.news-form{
+  display: flex;
+  justify-content: center;
+}
+
 .newsletter input[type="text"] {
   width: 40%;
   padding: 12px 20px;
@@ -320,29 +333,23 @@ form input.qty {
   position: absolute;
   right: 15%;
 }
-<<<<<<< HEAD
 
-#site-info {
-	height: 3em;
-	width: 100%;
-	line-height: 3;
-	text-align: center;
-	background: #00CDCD;
-	position: fixed;
-	color: #fff;
-	left: 0;
-	bottom: 0;
-	z-index: 10;
-}
+/* --------Mobile Phones-------- */
 
-@media only screen and (max-width: 360px){
-  .customer{
-    flex-direction: column;
+@media only screen and (max-width: 450px){
+  .slider img{
+    height: 300px;
   }
 
   .foo-link{
     flex-direction: column;
   }
 }
-=======
->>>>>>> d2161236686c0f322412f60ab4ce666d5719c946
+
+/* --------Tablets-------- */
+@media only screen and (max-width: 768px){
+  .foo-link{
+    justify-content: center;
+    width: 100%;
+  }
+}
