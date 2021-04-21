@@ -84,6 +84,7 @@ body {
   background: white;
   margin: auto;
   border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px lightgrey;
 }
 
 .error-dialog h1{
