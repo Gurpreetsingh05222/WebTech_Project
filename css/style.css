@@ -203,10 +203,22 @@ form input.qty {
   margin: auto;
 }
 
+.review{
+  margin: 5px;
+}
+
 .review img {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 5px;
   border-radius: 50%;
+  border: 7px solid #379683;
+  box-shadow: 0 0 0 4px hsl(127, 55%, 76%);
+}
+
+.review p{
+  border-bottom: solid 5px #8EE4AF;
+  padding-bottom: 10px;
 }
 /* NEWSLETTER */
 
@@ -341,6 +353,14 @@ form input.qty {
     height: 300px;
   }
 
+  .customer{
+    flex-direction: column;
+  }
+/* 
+  .review p{
+    border-left: solid 5px #8EE4AF;
+  } */
+
   .foo-link{
     flex-direction: column;
   }
@@ -348,6 +368,20 @@ form input.qty {
 
 /* --------Tablets-------- */
 @media only screen and (max-width: 768px){
+
+  .navbar .navbar-brand{
+    font-size: 26px;
+  }
+
+  .customer{
+    flex-direction: column;
+  }
+  
+  .review p{
+    border-bottom: none;
+    border-left: solid 5px #8EE4AF;
+  }
+
   .foo-link{
     justify-content: center;
     width: 100%;
