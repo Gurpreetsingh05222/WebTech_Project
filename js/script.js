@@ -1,4 +1,19 @@
 $(document).ready(function() {
+  if(sessionStorage.getItem("email")!=null){
+    $('#username').text("Hi " + sessionStorage.getItem('email'));
+    $('#sign-up').hide();
+    $('#login').hide();
+    $('#sign-out').show();
+  }
+
+  $('#sign-out').click(function(){
+    sessionStorage.removeItem('email');
+    $('#sign-up').show();
+    $('#login').show();
+    $('#sign-out').hide();
+    window. location. reload();
+  });
+
   $("#date").text((new Date).getFullYear());
 
   $('.slider').slick({
@@ -11,6 +26,7 @@ $(document).ready(function() {
     slidesToScroll: 1
   }); 
 });
+
 
 function validate(){
   var email = document.getElementById("email").value;

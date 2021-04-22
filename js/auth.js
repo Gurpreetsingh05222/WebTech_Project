@@ -11,8 +11,6 @@ $(document).ready(function() {
     $(".reg-error-modal").css("display","none");
   }
 
-
-
     // the handler for the click event of a submit button
     var ErrArr = [];
     $("#submit").click(
@@ -134,7 +132,6 @@ $(document).ready(function() {
             else{
                 $("#confirm_password").next().text("");
             }
-
 
 
             if(!isValid) {

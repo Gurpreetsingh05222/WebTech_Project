@@ -42,6 +42,11 @@ nav .navbar-nav li a{
   color: #EDF5E1 !important;
   }
 
+#sign-out{
+  padding-top: 15px;
+  display: none;
+}
+
   /*-----SLIDER-----*/
 
  .slider img{
