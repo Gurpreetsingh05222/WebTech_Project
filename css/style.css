@@ -210,6 +210,7 @@ form input.qty {
 .review img {
   width: 200px;
   height: 200px;
+  margin-bottom: 5px;
   border-radius: 50%;
   border: 7px solid #379683;
   box-shadow: 0 0 0 4px hsl(127, 55%, 76%);
