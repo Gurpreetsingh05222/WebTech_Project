@@ -18,9 +18,9 @@ function validate(){
 
   var result = emailReg.test(email);
   if(email == ""){
-    alert("Email cannot be empty");
+    $('#error').text("Please enter your email");
   }else if(!result){
-    alert("Please enter valid email");
+    $('#error').text("Please enter valid email");
   }
   else{
     window.location.href = "success.html";

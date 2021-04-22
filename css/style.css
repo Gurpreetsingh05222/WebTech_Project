@@ -258,6 +258,12 @@ form input.qty {
   cursor: pointer;
 }
 
+#error{
+  font-size: larger;
+  font-weight: 600;
+  color: red;
+}
+
 /* FOOTER */
 .footer {
   text-align: center;
