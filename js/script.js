@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('#username').text("Hi " + sessionStorage.getItem('email'));
     $('#sign-up').hide();
     $('#login').hide();
-    $('#sign-out').show();
+    $('#sign-out').css('display','block');
   }
 
   $('#sign-out').click(function(){
@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('#sign-up').show();
     $('#login').show();
     $('#sign-out').hide();
-    window. location. reload();
+    window.location.reload();
   });
 
   $("#date").text((new Date).getFullYear());
@@ -24,7 +24,7 @@ $(document).ready(function() {
     arrows:true,
     slidesToShow: 1,
     slidesToScroll: 1
-  }); 
+  });
 });
 
 

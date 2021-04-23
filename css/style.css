@@ -43,7 +43,6 @@ nav .navbar-nav li a{
   }
 
 #sign-out{
-  padding-top: 15px;
   display: none;
 }
 
@@ -370,7 +369,7 @@ form input.qty {
   .customer{
     flex-direction: column;
   }
-/* 
+/*
   .review p{
     border-left: solid 5px #8EE4AF;
   } */
@@ -390,7 +389,7 @@ form input.qty {
   .customer{
     flex-direction: column;
   }
-  
+
   .review p{
     border-bottom: none;
     border-left: solid 5px #8EE4AF;
