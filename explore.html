@@ -24,11 +24,15 @@
       type="text/javascript"
       src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"
     ></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="js/jquery.store.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.js"></script>
     <style>
         .trending{
             text-align: center;
@@ -46,7 +50,7 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <h1>Reader's Paradise</h1>
+      <h1 class="app-title" data-in-effect="rollIn">Reader's Paradise</h1>
       <p>"A room without book is like body without soul."</p>
     </header>
     <!-- Header End -->
@@ -794,6 +798,9 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+      $(function () {
+        $('.app-title').textillate();
+      });
     </script>
   </body>
 </html>
