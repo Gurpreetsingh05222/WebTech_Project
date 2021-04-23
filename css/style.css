@@ -404,3 +404,7 @@ form input.qty {
 .wd50{
   width: 50% !important;
 }
+
+li.nav-item.active{
+  font-weight: 700;
+}
