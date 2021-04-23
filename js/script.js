@@ -3,14 +3,20 @@ $(document).ready(function() {
     $('#username').text("Hi " + sessionStorage.getItem('email'));
     $('#sign-up').hide();
     $('#login').hide();
+    $('#sign-up-bottom').hide();
+    $('#login-bottom').hide();
     $('#sign-out').css('display','block');
+    $('#sign-out-bottom').css('display','block');
   }
 
-  $('#sign-out').click(function(){
+  $('#sign-out, #sign-out-bottom').click(function(){
     sessionStorage.removeItem('email');
     $('#sign-up').show();
     $('#login').show();
+    $('#sign-up-bottom').show();
+    $('#login-bottom').show();
     $('#sign-out').hide();
+    $('#sign-out-bottom').hide();
     window.location.reload();
   });
 

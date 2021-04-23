@@ -46,6 +46,10 @@ nav .navbar-nav li a{
   display: none;
 }
 
+#sign-out-bottom{
+  display: none;
+}
+
   /*-----SLIDER-----*/
 
  .slider img{

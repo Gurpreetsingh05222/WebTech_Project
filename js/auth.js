@@ -166,7 +166,7 @@ $(document).ready(function() {
 
     //Login Validation
 
-    $('#login').click(
+    $('#loginbtn').click(
         function(event){
             event.preventDefault();
             var emailRegex = /\b[A-Za-z0-9]+[.]{0,1}[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z]{2,4}\b/;
