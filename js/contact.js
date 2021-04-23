@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var input = $('.validate-input .input');
 
-  $('.validate-form').on('submit',function(){
+  $('#sendMail').click(function(){
       var check = true;
 
       for(var i=0; i<input.length; i++) {
@@ -11,7 +11,17 @@ $(document).ready(function(){
           }
       }
 
-      return check;
+      if(check){
+        $(".bg-contact").css("opacity","0.5");
+        $("#success-dialog").css('display','block');
+      }
+
+  });
+
+  $("#success-dialog .close").click(function(){
+    $(".bg-contact").css("opacity","1");
+    $("#success-dialog").css("display","none");
+    $("#contact-us-form").trigger("reset");
   });
 
 

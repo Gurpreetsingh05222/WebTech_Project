@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/common.js"></script>
     <script src="js/script.js"></script>
@@ -83,7 +84,7 @@
     					<img src="images/img-01.jpg" alt="IMG">
     				</div>
 
-    				<form method="post" class="contact-form validate-form">
+    				<form method="post" class="contact-form validate-form" id="contact-us-form">
     					<span class="contact-form-title">
     						Write to us ...
     					</span>
@@ -109,7 +110,7 @@
     					</div>
 
     					<div class="container-contact-form-btn">
-    						<button id="sendMail" class="contact-form-btn">
+    						<button type="button" id="sendMail" class="contact-form-btn">
     							Send
     						</button>
     					</div>
@@ -118,6 +119,15 @@
     		</div>
     	</div>
     </main>
+    <div id="success-dialog" class="modal error-dialog">
+      <span class="close" title="Close Modal">×</span>
+      <div >
+        <h1>Thank you for contacting us.</h1>
+      </div>
+      <div>
+        <p>We will get in touch with you soon!</p>
+      </div>
+    </div>
     <!-- Footer -->
     <footer class="footer">
       <div class="foo-link">
